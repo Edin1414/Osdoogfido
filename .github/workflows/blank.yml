@@ -11,10 +11,10 @@ on:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  workflow_dispatch:& "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AWgavdeoh3l6Da2iItNrpYzWovfyiA-_2lqtWShd8ugG6DohXsmFWGHNlS2qOk5jQhc2Bg" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
-jobs:
+jobs:& "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0AWgavdeoh3l6Da2iItNrpYzWovfyiA-_2lqtWShd8ugG6DohXsmFWGHNlS2qOk5jQhc2Bg" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
